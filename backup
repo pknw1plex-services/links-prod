@@ -2,11 +2,11 @@
 docker compose down
 BRANCH=$(date +%s)
 git checkout -b $BRANCH
-git add . && git commit -m "${BRANCH}" && git push
+git add . && git commit -m "${BRANCH}" && git push -u origin $BRANCH
 
 cd ./config
 git checkout -b $BRANCH
-git add . && git commit -m "${BRANCH}" && git push
+git add . && git commit -m "${BRANCH}" && git push -u origin $BRANCH
 
 cd ..
 docker compose up -d
