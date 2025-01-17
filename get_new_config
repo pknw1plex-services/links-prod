@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd ./config
+git checkout main 
+git pull
+
+cd ..
+docker compose up -d
